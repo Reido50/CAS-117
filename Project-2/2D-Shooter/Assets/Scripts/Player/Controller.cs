@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -44,7 +45,6 @@ public class Controller : MonoBehaviour
         "FreeRoam: Player can move in any direction and can aim\n" +
         "Astroids: Player moves forward/back in the direction they are facing and rotates with horizontal input")]
     public MovementModes movementMode = MovementModes.FreeRoam;
-
 
     // Whether the player can aim with the mouse or not
     private bool canAimWithMouse

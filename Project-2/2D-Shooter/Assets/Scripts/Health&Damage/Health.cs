@@ -34,6 +34,8 @@ public class Health : MonoBehaviour
     [Tooltip("The maximum number of lives this health can have")]
     public int maximumLives = 5;
 
+    public HealthBar healthBar;
+
     /// <summary>
     /// Description:
     /// Standard unity funciton called before the first frame update
@@ -136,6 +138,10 @@ public class Health : MonoBehaviour
             timeToBecomeDamagableAgain = Time.time + invincibilityTime;
             isInvincableFromDamage = true;
             currentHealth -= damageAmount;
+            if(healthBar != null)
+            {
+                healthBar.SetHealth(currentHealth);
+            }
             CheckDeath();
         }
     }

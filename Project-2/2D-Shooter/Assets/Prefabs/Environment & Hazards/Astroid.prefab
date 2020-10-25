@@ -50,7 +50,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -100,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamId: 3
   damageAmount: 10
+  hitEffect: {fileID: 0}
   destroyAfterDamage: 1
   dealDamageOnTriggerEnter: 1
   dealDamageOnTriggerStay: 1
@@ -137,10 +137,10 @@ MonoBehaviour:
   maximumHealth: 3
   currentHealth: 3
   invincibilityTime: 0.01
+  isAlwaysInvincible: 0
   useLives: 0
   currentLives: 3
   maximumLives: 5
-  isInvincible: 0
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
 --- !u!50 &-893941593513588248

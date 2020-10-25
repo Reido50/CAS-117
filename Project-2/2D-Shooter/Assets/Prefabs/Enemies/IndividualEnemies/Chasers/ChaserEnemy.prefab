@@ -52,7 +52,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4760475040570215109, guid: f33c91ee715a39d448ef7f030babf230, type: 3}
+  m_Sprite: {fileID: 4760475040570215109, guid: f33c91ee715a39d448ef7f030babf230,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,6 @@ MonoBehaviour:
   followTarget: {fileID: 0}
   followRange: 100
   guns: []
-  spawner: {fileID: 0}
   shootMode: 1
   movementMode: 1
   scrollDirection: {x: 1, y: 0, z: 0}
@@ -145,12 +144,15 @@ MonoBehaviour:
   maximumHealth: 3
   currentHealth: 3
   invincibilityTime: 0
+  isAlwaysInvincible: 0
   useLives: 0
   currentLives: 3
   maximumLives: 5
-  isInvincible: 0
-  deathEffect: {fileID: 2452382815751308013, guid: 990f3751046a4d840806774f23579fe2, type: 3}
-  hitEffect: {fileID: 6229913163069739088, guid: d6029318d740811488fd5dd38a7e1ce1, type: 3}
+  healthBar: {fileID: 0}
+  deathEffect: {fileID: 2452382815751308013, guid: 990f3751046a4d840806774f23579fe2,
+    type: 3}
+  hitEffect: {fileID: 6229913163069739088, guid: d6029318d740811488fd5dd38a7e1ce1,
+    type: 3}
 --- !u!50 &5724781533654324104
 Rigidbody2D:
   serializedVersion: 4
@@ -221,7 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamId: 1
   damageAmount: 10
-  destroyAfterDamage: 1
+  hitEffect: {fileID: 0}
+  destroyAfterDamage: 0
   dealDamageOnTriggerEnter: 1
   dealDamageOnTriggerStay: 0
   dealDamageOnCollision: 0
