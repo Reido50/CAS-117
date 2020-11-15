@@ -22,6 +22,8 @@ public class Damage : MonoBehaviour
     public bool dealDamageOnTriggerStay = false;
     [Tooltip("Whether or not to apply damage on non-trigger collider collisions")]
     public bool dealDamageOnCollision = false;
+    [Tooltip("Whether or not to apply damage on to enemies")]
+    public bool dealDamageToEnemies = false;
 
     /// <summary>
     /// Description:
@@ -86,6 +88,11 @@ public class Damage : MonoBehaviour
     /// <param name="collisionGameObject">The game object that has been collided with</param>
     private void DealDamage(GameObject collisionGameObject)
     {
+        if (collisionGameObject.CompareTag("Enemy") && !dealDamageToEnemies)
+        {
+            return;
+        }
+
         Health collidedHealth = collisionGameObject.GetComponent<Health>();
         if (collidedHealth != null)
         {
