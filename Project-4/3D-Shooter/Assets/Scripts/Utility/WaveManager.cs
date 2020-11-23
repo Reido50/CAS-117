@@ -31,6 +31,7 @@ public class WaveManager : MonoBehaviour
         // Determines when to spawn a set
         if(timeSinceLastWave <= 10.0 && timeSinceLastSpawn >= (spawnInterval)/(spawnVariable))
         {
+            // Set the wave to active
             if(!waveActive)
             {
                 waveActive = true;
@@ -41,6 +42,7 @@ public class WaveManager : MonoBehaviour
             timeSinceLastSpawn = 0;
         }
 
+        // Determines when the wave has been defeated
         if(waveActive && enemyParent.transform.childCount < 1)
         {
             waveActive = false;
@@ -50,9 +52,10 @@ public class WaveManager : MonoBehaviour
 
     void SpawnSet()
     {
-        Debug.Log("Spawn!");
+        // Get the position of the generator
         Vector3 generatorPoint = generator.transform.position;
 
+        // Spawn the enemies
         for (int i = 0; i < 2; i++)
         {
             float randomTheta = Random.Range(0, 2*Mathf.PI);

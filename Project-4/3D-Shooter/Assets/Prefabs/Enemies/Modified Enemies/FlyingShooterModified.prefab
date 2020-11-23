@@ -171,7 +171,7 @@ MonoBehaviour:
   canMove: 1
   target: {fileID: 0}
   attacker: {fileID: 6085952886581596488}
-  maximumAttackRange: 30
+  maximumAttackRange: 12
   doesAttack: 1
   lineOfSightToAttack: 0
   moveWhileAttacking: 0
