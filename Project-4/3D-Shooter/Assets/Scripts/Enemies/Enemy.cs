@@ -92,9 +92,9 @@ public class Enemy : MonoBehaviour
         {
             attacker = GetComponent<EnemyAttacker>();
         }
-        if (target == null && GameObject.FindGameObjectWithTag("Player") != null)
+        if (target == null && GameObject.FindGameObjectWithTag("Target") != null)
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            target = GameObject.FindGameObjectWithTag("Target").transform;
         }
         SetUpAnimator();
     }

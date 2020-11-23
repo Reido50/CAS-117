@@ -130,6 +130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_Rock_A
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 287e04e26dbc2654d84f039ceae434cb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287e04e26dbc2654d84f039ceae434cb, type: 3}
 --- !u!4 &5336555072296841059 stripped
